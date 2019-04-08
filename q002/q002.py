@@ -85,17 +85,3 @@ class num2Forms:
             list.append(num % 10)
             num = num // 10
         return list
-
-
-if __name__ == '__main__':
-    for i in range(0, 10000):
-        for j in range(0, 10000):
-            number1 = num2Forms().num2ListNode(i)
-            number2 = num2Forms().num2ListNode(j)
-            result = Solution().addTwoNumbers(number1, number2)
-            if i % 50 == 0 and j == 0:
-                print(i, " ", j, " ", i+j, " ", result)
-            if result != num2Forms.num2List(i+j) :
-                print("%d + %d, expect: %d" % (i, j, i+j))
-                print("get:", result)
-                exit()
