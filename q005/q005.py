@@ -29,27 +29,44 @@ class Solution:
         if s == "":
             return ""
 
-        matrix_len = len(s) + 1
-        matrix = [[False for j in range(matrix_len)] for i in range(len(s))]
-        matrix.append([True for _ in range(matrix_len)])
-        for i in range(matrix_len):
-            matrix[i][i] = True
-            matrix[i][0] = True
+        result = {'max_len': 0,
+                  'str': []}
+        matrix = [[False for j in range(len(s))] for i in range(len(s))]
 
-        def print_matrix(m):
-            for i in range(matrix_len):
-                print(m[i])
+        # def print_matrix(m):
+        #     for i in range(len(s)):
+        #         print(m[i])
+        #     print()
 
         for i in reversed(range(len(s))):
-            for j in range(len(s)):
-                j = j + 1
-                print(i, j)
-                if i == j+1:
+            for j in range(i, len(s)):
+                # print(i,j, sep=",")
+                if i == j:
+                    # print(1)
+                    matrix[i][j] = True
+                elif i == j-1:
+                    # print(2)
+                    # print(s[i], s[j])
                     matrix[i][j] = s[i] == s[j]
-                elif i < j - 1:
-                    matrix[i][j] = matrix[i+1][j-1] and s[i] == s[j] # out of range
-            print(i, j, sep=",")
-            print_matrix(matrix)
+                else:
+                    # print(3)
+                    if i == len(s)-1 or j == 0:
+                        # print(3.1)
+                        matrix[i][j] = s[i] == s[j]
+                    else:
+                        # print(3.2)
+                        # print(matrix[i+1][j-1])
+                        # print(s[i], s[j], sep=" ")
+                        matrix[i][j] = (matrix[i+1][j-1] and s[i] == s[j])
+
+
+                if matrix[i][j]:
+                    if result['max_len'] < j-i+1:
+                        result['max_len'] = j-i+1
+                        result['str'] = [i,j+1]
+            # print_matrix(matrix)
+            # print()
+        return s[result['str'][0]: result['str'][1]]
 
 
 
