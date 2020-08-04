@@ -34,3 +34,10 @@
 + q91 M
     not complete. Not a good one for DP.
 
+## Greedy
++ q055
+
++ q134
+
++ q376
+
