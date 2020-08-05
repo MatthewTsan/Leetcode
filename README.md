@@ -41,3 +41,6 @@
 
 + q376
 
++ q402
+    Note: min number must be increase. To minimize, remove the peak. To get the most min number, remove the first peak.
+
