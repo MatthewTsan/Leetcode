@@ -1,6 +1,6 @@
-class Node:
+class TreeNode:
     def __init__(self, data):
-        self.data = data
+        self.val = data
         self.left = None
         self.right = None
 
@@ -17,10 +17,10 @@ class BST:
     def __init__(self):
         self.__root = None
 
-    def find(self, data: Node):
+    def find(self, data: TreeNode):
         result = self.__root
-        while result is not None and result.data != data:
-            if result.data < data:
+        while result is not None and result.val != data:
+            if result.val < data:
                 result = result.right
             else:
                 result = result.left
@@ -28,21 +28,21 @@ class BST:
 
     def add(self, data):
         if self.__root is None:
-            self.__root = Node(data)
+            self.__root = TreeNode(data)
             return
         else:
             pos = self.__root
             father = None
             while pos is not None:
                 father = pos
-                if pos.data < data:
+                if pos.val < data:
                     pos = pos.right
                 else:
                     pos = pos.left
-            print(father.data)
+            print(father.val)
             print(pos)
-            pos = Node(data)
-            if father.data < data:
+            pos = TreeNode(data)
+            if father.val < data:
                 father.right = pos
             else:
                 father.left = pos
@@ -62,17 +62,17 @@ class BST:
                     pFather = p
                     p = p.left
                 pFather.left = None
-                self.__root.data = p.data
+                self.__root.val = p.val
                 return
 
         posFather = self.__root
-        if data > self.__root.data:
+        if data > self.__root.val:
             pos = self.__root.right
         else:
             pos = self.__root.left
-        while pos.data != data:
+        while pos.val != data:
             posFather = pos
-            if data > pos.data:
+            if data > pos.val:
                 pos = pos.right
             else:
                 pos = pos.left
@@ -86,14 +86,14 @@ class BST:
             pFather = pos
             p = pos.right
             if p.left is None:
-                pos.data = p.data
+                pos.val = p.val
                 pos.right = None
             else:
                 while p.left is not None:
                     pFather = p
                     p = p.left
                 # print(pFather.data, p.data)
-                pos.data = p.data
+                pos.val = p.val
                 pFather.left = None
 
     def __printRecursive(self, node):
@@ -110,6 +110,9 @@ class BST:
         self.__printRecursive(self.__root)
         print()
 
+    def getRoot(self):
+        return self.__root
+
 
 if __name__ == '__main__':
     list = [1, 6, 5, 4, 10, 9, 8, 7]
@@ -122,7 +125,7 @@ if __name__ == '__main__':
     tree.printTree()
 
     print(tree.find(6))
-    print(tree.find(4).data)
+    print(tree.find(4).val)
 
     tree.delete(6)
     tree.printTree()

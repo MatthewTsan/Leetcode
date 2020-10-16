@@ -44,3 +44,9 @@
 + q402
     Note: min number must be increase. To minimize, remove the peak. To get the most min number, remove the first peak.
 
+
+## Binary Search Tree
+Add BST template into /template/BST
+
++ q1038
+    Note: Do DFS with sum in right-left order. 
