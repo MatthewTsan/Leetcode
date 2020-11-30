@@ -17,14 +17,14 @@ class BST:
     def __init__(self):
         self.__root = None
 
-    def find(self, data: TreeNode):
-        result = self.__root
-        while result is not None and result.val != data:
-            if result.val < data:
-                result = result.right
+    def find(self, data):
+        p_result = self.__root
+        while p_result is not None and p_result.val != data:
+            if p_result.val < data:
+                p_result = p_result.right
             else:
-                result = result.left
-        return result
+                p_result = p_result.left
+        return p_result
 
     def add(self, data):
         if self.__root is None:
@@ -120,7 +120,7 @@ if __name__ == '__main__':
     for item in list:
         print("add", item)
         tree.add(item)
-        tree.printTree()
+        tree.priprintTreentTree()
 
     tree.printTree()
 
