@@ -49,6 +49,8 @@
 + q010 H
     note: on "*" or not
     
++ q120 M: typically DP
+    
 + q416 M:
     package question.
     
