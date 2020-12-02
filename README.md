@@ -34,9 +34,9 @@
     Note: anylize all the hiden information.
 + q152:
     colulate max and min
-+ q062: easy
++ q062 M: easy
 
-+ 063:
++ 063 M:
     note: be careful if the rock in edge
 
 + q064
