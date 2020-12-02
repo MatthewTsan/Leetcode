@@ -73,6 +73,8 @@ Do DFS with recursive
 ## Recursive
 + q095 M: Typically recursive. 
     Time complexity could be large, n is small: 0<= n <= 8.
+    
++ q096 M: recursive + mem
 
 
 ## Tree

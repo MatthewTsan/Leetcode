@@ -33,3 +33,4 @@ class Solution:
             return []
         list = range(1, n + 1)
         return self.buildTree(list)
+
