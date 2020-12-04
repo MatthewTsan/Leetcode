@@ -3,6 +3,10 @@
 ## Just do it!
 + 012 M:
 
+## Basic method
++ q876 E:
+    fast and slow on linkedList to find the middle.
+
 
 ## Sliding windows
 + q904:
