@@ -22,6 +22,9 @@
 + q056:
     sort all beginings and merge. QuickSort algorithm in.
 
++ q148 E:
+    Typical merge sort.
+
 + q1528:
     Note:
     + list to str: use "".join(list)
