@@ -1,11 +1,14 @@
 # Leetcode
 
-## Just do it!
+## Brute force
 + 012 M:
 
 ## Basic method
 + q876 E:
     fast and slow on linkedList to find the middle.
+    
++ q146 M:
+    queue and dictionary
 
 
 ## Sliding windows
