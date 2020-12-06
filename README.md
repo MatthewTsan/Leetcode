@@ -7,6 +7,9 @@
 + q146 M:
     queue and dictionary
 
++ q238 M:
+    result = left * right
+
 + q721 M:    
     DSU and dictionary
 
