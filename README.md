@@ -41,6 +41,10 @@
     Note:
     + list to str: use "".join(list)
     + Use bucketSort in small size data
+    
+## Link list
++ q092 M:
+    reverse, just be careful
 
 ## Dynamic programing
 + q010 H
