@@ -12,3 +12,17 @@ class _1:
             return (0, rest, _id) if rest[0].isalpha() else (1, )
             return sorted(logs, key=get_key)
 ```
+
+# 2 queue
+use collections.deque
+```python
+from collections import dequeue
+q = dequeue() # q is a iterable, like List[]
+
+# put:
+q.append(value)
+
+# pop:
+q.popleft()
+
+```
