@@ -4,11 +4,14 @@
 + 012 M:
 
 ## Basic method
-+ q876 E:
-    fast and slow on linkedList to find the middle.
-    
 + q146 M:
     queue and dictionary
+
++ q721 M:    
+    DSU and dictionary
+
++ q876 E:
+    fast and slow on linkedList to find the middle.
 
 
 ## Sliding windows
