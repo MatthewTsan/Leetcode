@@ -56,6 +56,9 @@
    
 + q092 M:
     reverse, just be careful
+    
++ q138 M:
+    make dict.
 
 ## Dynamic programing
 + q010 H
