@@ -50,6 +50,9 @@
 ## Link list
 + q021 E: 
     merge two link list
+    
++ q023 H:
+    merge K link list, use heap
    
 + q092 M:
     reverse, just be careful
