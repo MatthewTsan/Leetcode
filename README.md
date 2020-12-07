@@ -60,6 +60,9 @@
 + q138 M:
     make dict.
 
++ q148 E:
+    Typical merge sort on link list.
+
 ## Dynamic programing
 + q010 H
     note: on "*" or not
