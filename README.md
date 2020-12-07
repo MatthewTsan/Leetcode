@@ -4,6 +4,8 @@
 + 012 M:
 
 ## Basic method
++ q121 E:
+    find the max diff in one pass
 + q146 M:
     queue and dictionary
 
