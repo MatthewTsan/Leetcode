@@ -48,6 +48,9 @@
     + Use bucketSort in small size data
     
 ## Link list
++ q021 E: 
+    merge two link list
+   
 + q092 M:
     reverse, just be careful
 
