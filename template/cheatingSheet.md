@@ -40,3 +40,22 @@ class DSU:
     def union(self, x, y):
         self.p[self.find(x)] = self.find(y)
 ```
+
+# 4 Heap
+```python3
+Insert: add to last and move higher
+
+construct or delete: do heapify below
+    def heapify(self, arr, n, i):
+        smallest = i
+        l = 2*i +1
+        r = 2*i +2
+        if l < n and arr[l].val < arr[i].val:
+            smallest = l
+        if r < n and arr[r].val < arr[smallest].val:
+            smallest = r
+            
+        if smallest != i:
+            arr[i], arr[smallest] = arr[smallest], arr[i]
+            self.heapify(arr, n, smallest)
+```
