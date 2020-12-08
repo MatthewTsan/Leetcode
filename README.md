@@ -60,6 +60,9 @@
 + q138 M:
     make dict.
 
++ q143 M:
+    Split, reverse, merge
+
 + q148 E:
     Typical merge sort on link list.
 
