@@ -59,3 +59,29 @@ construct or delete: do heapify below
             arr[i], arr[smallest] = arr[smallest], arr[i]
             self.heapify(arr, n, smallest)
 ```
+
+# 5 LinkList
+## Split in middle
+```python
+# Split the list
+        slow = fast = head
+        preslow = slow
+        while fast and fast.next:
+            preslow = slow
+            slow, fast = slow.next, fast.next.next
+        if fast:
+            preslow = slow
+            slow = slow.next
+        preslow.next = None     # Most Important
+        head2 = slow
+```
+
+## Reverse
+```python
+# reverse the head2
+        pre, cur = head, head.next
+        while cur:
+            cur.next, pre, cur = pre, cur, cur.next
+        head.next = None       # Most Important
+        head = pre
+```
