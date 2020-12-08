@@ -48,6 +48,9 @@
     + Use bucketSort in small size data
     
 ## Link list
++ q019 M:
+    create one pointer before n stops of cur
+    
 + q021 E: 
     merge two link list
     
