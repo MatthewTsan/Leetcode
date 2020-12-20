@@ -1,6 +1,7 @@
 # Cheating Sheet
 
 ## Java Language
+
 ### Collections
 #### HashMap:
 ```java
@@ -21,3 +22,11 @@ boolean accessOrder:  false： 基于插入顺序   true：基于访问顺序,
 + 如果需要按照插入顺序或者访问顺序保存，就使用LinkedHashMap;
 + 如果需要按照键值的顺序保存，就使用TreeMap
 + 如果什么都不需要，使用HashMap(效率高);
+
+#### HashSet
+ ```java
+Set<> hashSet = new HashSet<>();
+hashSet.contains();
+hashSet.add();
+hashSet.remove();
+ ```
