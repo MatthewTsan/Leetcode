@@ -1,6 +1,30 @@
 # Cheating Sheet
 
 ## Java Language
+### stack and queue
+use deque
+```java
+ArrayDeque<Integer> deq = new ArrayDeque<Integer>();
+```
++ as a stack:
+```java
+element = deq.pop();
+deq.push(<E>);
+```
+
++ as a queue:
+```java
+deq.getFirst();
+deq.getLast();
+
+deq.add(E e);
+deq.addFirst(E e);
+deq.addLast(E e);
+
+deq.remove();
+deq.removeFirst(); // equivalent to deq.remove()
+deq.removeLast();
+```
 
 ### Collections
 #### HashMap:
