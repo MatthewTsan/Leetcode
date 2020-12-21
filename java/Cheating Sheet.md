@@ -1,6 +1,33 @@
 # Cheating Sheet
 
 ## Java Language
+### heap
++ Min Heap: --> to keep the min element always on top, so you can access it in O(1).
+```java
+PriorityQueue<Integer> minHeap = new PriorityQueue<Integer>();
+```
+
++ Max Heap: --> to keep the max element always on top, the same order as above.
+```java
+PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Comparator.reverseOrder());
+
+// equivalent to:
+PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>(new Comparator<Integer>() {
+    @Override
+    public int compare(Integer o1, Integer o2) {
+        return - Integer.compare(o1, o2);
+    }
+});
+```
++ Method
+```java
+maxHeap.add(E e);
+maxHeap.offer(E e);
+maxHeap.peek(); // retrieve but not delete
+maxHeap.poll(); // retrieve and delete
+maxHeap.remove(E e); // delete specified object
+```
+
 ### stack and queue
 use deque
 ```java
@@ -13,7 +40,19 @@ deq.push(<E>);
 ```
 
 + as a queue:
+|           |   First Element (Head)                        | Last Element (Tail)               |
+|----       |   ----                                        | ----                              |
+|           |   Throws exception        |   Special value   | Throws exception  | Special value |
+|----       |   ----                    |   ----            | ----              | ----          |
+| Insert    |   addFirst(e)             |   offerFirst(e)   | addLast(e)        | offerLast(e)  |
+| Remove    | 	removeFirst()           |   pollFirst()	    | removeLast()	    | pollLast()    |
+| Examine   | 	getFirst()	            |   peekFirst()	    | getLast()	        | peekLast()    |
 ```java
+deq.peek(); // equivalent to deq.peekFirst()
+deq.peekFirst();
+deq.peekLast();
+// This method differs from peek*() only in that 
+// it throws an exception if this deque is empty.
 deq.getFirst();
 deq.getLast();
 
