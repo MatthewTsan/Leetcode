@@ -29,7 +29,16 @@ maxHeap.remove(E e); // delete specified object
 ```
 
 ### stack and queue
-use deque
+#### Stack class
+```java
+Stack<Character> stack = new Stack<>();
+stack.push(<E>);
+stack.pop();
+stack.peak();
+```
+
+
+#### deque
 ```java
 ArrayDeque<Integer> deq = new ArrayDeque<Integer>();
 ```
