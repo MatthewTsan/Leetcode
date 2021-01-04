@@ -37,6 +37,8 @@
 + q347:
     insert to Heap and pop (N-k) smallest
     
++ q759:
+
 + q767:
     remove(maxHeap) 2 most frequency(HashMap) character to make answer.
 
