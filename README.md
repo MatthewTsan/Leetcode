@@ -33,6 +33,9 @@
 ## Heap
 + q295:
     small num into maxHeap. big num into minHeap.
+    
++ q347:
+    insert to Heap and pop (N-k) smallest
 
 
 ## Sorting
