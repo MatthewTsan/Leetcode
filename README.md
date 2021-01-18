@@ -149,3 +149,19 @@ Add BST template into /template/BST
 
 + q1038
     Note: Do DFS with sum in right-left order. 
+    
+## LCA
++ q236
+    LCA on ragular binary tree: DFS on Tree. 
+    
+    mid = curr == p or curr == q
+    if left + right + mid >= 2:
+        find the tree
+        
+    return mid or left or right
+    
++ q235
+    LCA on BST:
+    
+    dfs until find the node that:
+        curr.val >= max(p, q) and curr.val <= min(p, q)
