@@ -5,8 +5,40 @@ class ListNode:
         self.next = None
 
 
-class Solution:
+class Solution_1:
+    def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
+        head = ListNode()
+        p = head
+        p1, p2 = l1, l2
+        mem = 0
+        while p1 and p2:
+            sumVal = p1.val + p2.val + mem
+            p.next = ListNode(sumVal % 10)
+            mem = sumVal // 10
 
+            p1 = p1.next
+            p2 = p2.next
+            p = p.next
+
+        while p1:
+            sumVal = p1.val + mem
+            p.next = ListNode(sumVal % 10)
+            mem = sumVal // 10
+            p1 = p1.next
+            p = p.next
+
+        while p2:
+            sumVal = p2.val + mem
+            p.next = ListNode(sumVal % 10)
+            mem = sumVal // 10
+            p2 = p2.next
+            p = p.next
+        if mem:
+            p.next = ListNode(mem)
+
+        return head.next
+
+class Solution:
     def Node2List(self, head):
         p = head
         list = [p.val]

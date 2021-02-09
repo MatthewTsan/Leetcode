@@ -1,6 +1,7 @@
 import heapq
 
 
+
 class MedianFinder:
     minHeap = []
     maxHeap = []
